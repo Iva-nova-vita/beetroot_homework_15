@@ -1,14 +1,97 @@
-@import url("https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,700,900&display=swap");
 /* font-family: 'Pacifico', cursive;
 font-family: 'Raleway', sans-serif; */
 body {
-  margin: 0 0; }
+  margin: 0 0;
+}
+body p {
+  font: lighter 17px/27px "Raleway", sans-serif;
+}
 
 #home {
   width: 100vw;
   height: 100vh;
   background-image: url(../images/img.png);
-  background-position: 50% 50%; }
-  @media screen and (max-width: 540px) {
-    #home {
-      background-image: url(../images/img.max-width.jpg); } }
+  background-position: 50% 50%;
+}
+@media screen and (max-width: 540px) {
+  #home {
+    background-image: url(../images/img.max-width.jpg);
+  }
+}
+#home header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10%;
+  height: 150px;
+  align-items: center;
+}
+#home header span {
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+  color: black;
+}
+#home header a {
+  margin: 10px 25px;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+}
+#home header a:active {
+  text-decoration: overline;
+}
+#home section {
+  margin: 5% 0 0 10%;
+}
+#home section p {
+  width: 30%;
+}
+@media screen and (min-width: 541px) and (max-width: 960px) {
+  #home section p {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 540px) {
+  #home section p {
+    width: 60%;
+  }
+}
+#home section h1 {
+  font: 800 60px/50px "Raleway", sans-serif;
+  letter-spacing: 0;
+  color: black;
+}
+#home section a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-weight: lighter;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #ff6033;
+  padding: 20px;
+  margin-top: 35px;
+  box-shadow: 0 2px 5px grey;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+
+.menu__btn {
+  width: 27px;
+  height: 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  visibility: hidden;
+}
+.menu__btn span {
+  display: block;
+  height: 3px;
+  width: 27px;
+  background-color: black;
+}

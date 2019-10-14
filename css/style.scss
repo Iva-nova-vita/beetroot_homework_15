@@ -1,9 +1,35 @@
-@import url("https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,700,900&display=swap");
 /* font-family: 'Pacifico', cursive;
 font-family: 'Raleway', sans-serif; */
+$font: "Raleway", sans-serif;
+$white: white;
+$black: black;
+@mixin a-black {
+  text-decoration: none;
+  font-family: $font;
+  color: $black;
+  font-weight: bold;
+}
+@mixin a-white {
+  display: inline-block;
+  text-decoration: none;
+  font-family: $font;
+  color: $white;
+  font-weight: lighter;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #ff6033;
+  padding: 20px;
+  margin-top: 35px;
+  box-shadow: 0 2px 5px grey;
+}
 body {
   margin: 0 0;
+  p {
+    font: lighter 17px/27px "Raleway", sans-serif;
+  }
 }
+
 #home {
   width: 100vw;
   height: 100vh;
@@ -11,5 +37,68 @@ body {
   background-position: 50% 50%;
   @media screen and (max-width: 540px) {
     background-image: url(../images/img.max-width.jpg);
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+    height: 150px;
+    align-items: center;
+    span {
+      font-family: "Pacifico", cursive;
+      font-size: 50px;
+      color: $black;
+    }
+    a {
+      margin: 10px 25px;
+      @include a-black;
+      font-size: 16px;
+      &:active {
+        text-decoration: overline;
+      }
+    }
+  }
+  section {
+    p {
+      width: 30%;
+      @media screen and (min-width: 541px) and (max-width: 960px) {
+        & {
+          width: 45%;
+        }
+      }
+      @media screen and (max-width: 540px) {
+        & {
+          width: 60%;
+        }
+      }
+    }
+
+    margin: 5% 0 0 10%;
+    h1 {
+      font: 800 60px/50px "Raleway", sans-serif;
+      letter-spacing: 0;
+      color: $black;
+    }
+    a {
+      @include a-white();
+    }
+  }
+}
+#menu__toggle {
+  opacity: 0;
+}
+.menu__btn {
+  width: 27px;
+  height: 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  visibility: hidden;
+
+  span {
+    display: block;
+    height: 3px;
+    width: 27px;
+    background-color: $black;
   }
 }
