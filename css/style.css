@@ -42,6 +42,12 @@ body p {
 #home header a:active {
   text-decoration: overline;
 }
+@media screen and (max-width: 1140px) {
+  #home header a {
+    /*visibility: visible;*/
+    display: none;
+  }
+}
 #home section {
   margin: 5% 0 0 10%;
 }
@@ -82,16 +88,30 @@ body p {
 }
 
 .menu__btn {
+  position: absolute;
+  right: 10%;
   width: 27px;
   height: 27px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  visibility: hidden;
+  display: inline-block;
+  /*visibility: hidden;*/
+  display: none;
+}
+@media screen and (max-width: 1140px) {
+  .menu__btn {
+    /*visibility: visible;*/
+    display: inline-block;
+  }
 }
 .menu__btn span {
   display: block;
+  position: absolute;
   height: 3px;
   width: 27px;
   background-color: black;
+}
+.menu__btn span:nth-child(2) {
+  top: 9px;
+}
+.menu__btn span:nth-child(3) {
+  top: 18px;
 }
