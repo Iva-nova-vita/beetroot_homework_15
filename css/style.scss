@@ -2,19 +2,19 @@
 /* font-family: 'Pacifico', cursive;
 font-family: 'Raleway', sans-serif; */
 $font: "Raleway", sans-serif;
-$white: white;
-$black: black;
-@mixin a-black {
+$a-color: white;
+$main-color: black;
+@mixin main-color {
   text-decoration: none;
   font-family: $font;
-  color: $black;
+  color: $main-color;
   font-weight: bold;
 }
-@mixin a-white($background-color: #ff6033) {
+@mixin a-color($background-color: #ff6033) {
   display: inline-block;
   text-decoration: none;
   font-family: $font;
-  color: $white;
+  color: $a-color;
   font-weight: lighter;
   font-size: 20px;
   text-transform: uppercase;
@@ -25,16 +25,18 @@ $black: black;
 }
 body {
   margin: 0 0;
+  width: 100%;
+
   p {
     font: lighter 17px/27px "Raleway", sans-serif;
   }
 }
 
 #home {
-  width: 100vw;
   height: 100vh;
   background-image: url(../images/img.png);
   background-position: 50% 50%;
+  position: relative;
   @media screen and (max-width: 540px) {
     background-image: url(../images/img.max-width.jpg);
   }
@@ -47,11 +49,11 @@ body {
     span {
       font-family: "Pacifico", cursive;
       font-size: 50px;
-      color: $black;
+      color: $main-color;
     }
     a {
       margin: 10px 25px;
-      @include a-black;
+      @include main-color;
       font-size: 16px;
       &:active {
         text-decoration: overline;
@@ -83,11 +85,16 @@ body {
     h1 {
       font: 800 60px/50px "Raleway", sans-serif;
       letter-spacing: 0;
-      color: $black;
+      color: $main-color;
     }
     a {
-      @include a-white();
+      @include a-color();
     }
+  }
+  div {
+    position: absolute;
+    top: 90%;
+    left: 50%;
   }
 }
 #menu__toggle {
@@ -99,13 +106,13 @@ body {
   width: 27px;
   height: 27px;
   display: inline-block;
-  /*visibility: hidden;*/
-  display: none;
+  visibility: hidden;
+  /*display: none;*/
 
   @media screen and (max-width: 1140px) {
     & {
-      /*visibility: visible;*/
-      display: inline-block;
+      visibility: visible;
+      /*display: inline-block;*/
     }
   }
 
@@ -114,7 +121,7 @@ body {
     position: absolute;
     height: 3px;
     width: 27px;
-    background-color: $black;
+    background-color: $main-color;
     &:nth-child(2) {
       top: 9px;
     }
@@ -122,4 +129,26 @@ body {
       top: 18px;
     }
   }
+}
+#about_us {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #00baba;
+  padding: 0 10%;
+  height: 700px;
+
+  align-items: center;
+
+  section,
+  img {
+    width: 45%;
+  }
+  h1 {
+    font: 700 90px/70px "Raleway", sans-serif;
+    letter-spacing: 0;
+    color: $a-color;
+    margin: 30px 0;
+  }
+  p {color: $a-color;}
 }
