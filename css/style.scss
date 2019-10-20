@@ -21,7 +21,9 @@ $main-color: black;
   background-color: $background-color; //#ff6033;
   padding: 20px;
   margin-top: 35px;
-  box-shadow: 0 2px 5px grey;
+  &:hover {
+    box-shadow: 0 2px 5px grey;
+  }
 }
 body {
   margin: 0 0;
@@ -197,7 +199,9 @@ body {
       height: 100px;
       width: 400px;
       margin-top: 35px;
-      box-shadow: 0 2px 5px grey;
+      &:hover {
+        box-shadow: 0 4px 7px grey;
+      }
       background-color: #ffffff;
       @media screen and (min-width: 421px) and (max-width: 541px) {
         & {
@@ -237,6 +241,7 @@ body {
     align-items: center;
     width: 30%;
     justify-content: center;
+    border-left: 1px solid black;
   }
 }
 #tomato {
@@ -271,6 +276,53 @@ body {
       & {
         font-size: 60px;
       }
+    }
+  }
+}
+#gallery {
+  text-align: center;
+  background-color: #ffe92f;
+  h1 {
+    font: 600 90px/50px "Raleway", sans-serif;
+    letter-spacing: 0;
+    color: $main-color;
+    padding-top: 100px;
+    margin: 0 auto 50px auto;
+  }
+  p {
+    width: 40%;
+    margin: auto;
+  }
+}
+#row1 {
+  padding: 5% 10% 0 10%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffe92f;
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+  }
+  .column1 {
+    width: 60%;
+    @media screen and (max-width: 960px) {
+      width: 100%;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .column2 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    @media screen and (max-width: 960px) {
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
     }
   }
 }

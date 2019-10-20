@@ -66,8 +66,9 @@ body {
       text-transform: uppercase;
       background-color: #ff6033;
       padding: 20px;
-      margin-top: 35px;
-      box-shadow: 0 2px 5px grey; }
+      margin-top: 35px; }
+      #home section a:hover {
+        box-shadow: 0 2px 5px grey; }
   #home div {
     position: absolute;
     top: 90%;
@@ -148,8 +149,9 @@ body {
       height: 100px;
       width: 400px;
       margin-top: 35px;
-      box-shadow: 0 2px 5px grey;
       background-color: #ffffff; }
+      #our_services section .botton:hover {
+        box-shadow: 0 4px 7px grey; }
       @media screen and (min-width: 421px) and (max-width: 541px) {
         #our_services section .botton {
           width: 300px;
@@ -178,7 +180,8 @@ body {
   display: flex;
   align-items: center;
   width: 30%;
-  justify-content: center; }
+  justify-content: center;
+  border-left: 1px solid black; }
 
 #tomato {
   width: 50%;
@@ -206,3 +209,43 @@ body {
     @media screen and (max-width: 350px) {
       #tomato h1 {
         font-size: 60px; } }
+
+#gallery {
+  text-align: center;
+  background-color: #ffe92f; }
+  #gallery h1 {
+    font: 600 90px/50px "Raleway", sans-serif;
+    letter-spacing: 0;
+    color: black;
+    padding-top: 100px;
+    margin: 0 auto 50px auto; }
+  #gallery p {
+    width: 40%;
+    margin: auto; }
+
+#row1 {
+  padding: 5% 10% 0 10%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffe92f; }
+  @media screen and (max-width: 960px) {
+    #row1 {
+      flex-direction: column; } }
+  #row1 .column1 {
+    width: 60%; }
+    @media screen and (max-width: 960px) {
+      #row1 .column1 {
+        width: 100%; } }
+    #row1 .column1 img {
+      max-width: 100%;
+      height: auto; }
+  #row1 .column2 {
+    display: flex;
+    flex-direction: column;
+    width: 30%; }
+    @media screen and (max-width: 960px) {
+      #row1 .column2 {
+        width: 100%; } }
+    #row1 .column2 img {
+      max-width: 100%;
+      height: auto; }
