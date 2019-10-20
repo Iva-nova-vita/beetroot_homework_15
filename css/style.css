@@ -11,6 +11,7 @@ body {
   height: 100vh;
   background-image: url(../images/img.png);
   background-position: 50% 50%;
+  background-repeat: no-repeat;
   position: relative; }
   @media screen and (max-width: 540px) {
     #home {
@@ -45,9 +46,12 @@ body {
       @media screen and (min-width: 541px) and (max-width: 960px) {
         #home section p {
           width: 45%; } }
-      @media screen and (max-width: 540px) {
+      @media screen and (min-width: 351px) and (max-width: 540px) {
         #home section p {
           width: 60%; } }
+      @media screen and (max-width: 350px) {
+        #home section p {
+          width: 100%; } }
     #home section h1 {
       font: 800 60px/50px "Raleway", sans-serif;
       letter-spacing: 0;
@@ -128,37 +132,77 @@ body {
   #about_us p {
     color: white; }
 
-/* #our_services {
+#our_services {
   display: flex;
   justify-content: space-between;
   background-color: #70bfff;
   padding: 10% 10% 10% 18%;
-
-  flex-wrap: wrap;
-  align-items: center;
-  #icons {
+  flex-wrap: wrap-reverse;
+  align-items: center; }
+  #our_services section {
     display: flex;
-    flex-direction: column;
-
-    a {
-      position: relative;
-      text-align: center;
-      text-decoration: none;
-      font-family: $font;
-      color: $main-color;
-      font-weight: bold;
-      font-size: 20px;
-      background-color: #ffffff; 
-      
+    flex-direction: column; }
+    #our_services section .botton {
+      display: flex;
+      justify-content: space-between;
       height: 100px;
       width: 400px;
       margin-top: 35px;
       box-shadow: 0 2px 5px grey;
-      img {
-        position: absolute;
-        right: 20px;
-        top: 20px;
-      }
-    }
-  }
-} */
+      background-color: #ffffff; }
+      @media screen and (min-width: 421px) and (max-width: 541px) {
+        #our_services section .botton {
+          width: 300px;
+          height: 80px; } }
+      @media screen and (min-width: 351px) and (max-width: 420px) {
+        #our_services section .botton {
+          width: 270px;
+          height: 70px; } }
+      @media screen and (max-width: 350px) {
+        #our_services section .botton {
+          width: 230px;
+          height: 70px; } }
+
+.botton a.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  width: 70%; }
+
+.botton a.icons {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: center; }
+
+#tomato {
+  width: 50%;
+  height: 540px;
+  background-image: url(../images/tomato.png);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 1111px) {
+    #tomato {
+      height: 400px;
+      width: 70%; } }
+  #tomato h1 {
+    font: 600 90px/70px "Raleway", sans-serif;
+    letter-spacing: 0;
+    color: white;
+    margin: auto;
+    text-align: center; }
+    @media screen and (min-width: 651px) and (max-width: 1110px) {
+      #tomato h1 {
+        font-size: 77px; } }
+    @media screen and (min-width: 351px) and (max-width: 650px) {
+      #tomato h1 {
+        font-size: 70px; } }
+    @media screen and (max-width: 350px) {
+      #tomato h1 {
+        font-size: 60px; } }
