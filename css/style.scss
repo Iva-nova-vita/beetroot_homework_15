@@ -293,6 +293,10 @@ body {
     width: 40%;
     margin: auto;
   }
+  a {
+    @include a-color($background-color:#5585a2);
+    width: 200px;
+  }
 }
 #row1 {
   padding: 5% 10% 0 10%;
@@ -310,6 +314,7 @@ body {
     img {
       max-width: 100%;
       height: auto;
+      padding: 20px 0 10px 0;
     }
   }
   .column2 {
@@ -323,6 +328,27 @@ body {
     img {
       max-width: 100%;
       height: auto;
+      padding: 10px 0;
     }
+  }
+}
+#row2 {
+  padding: 0 10% 0 10%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffe92f;
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+  }
+  .column {
+    width: 45%;
+    @media screen and (max-width: 960px) {
+      width: 100%;
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    padding: 10px 0;
   }
 }
