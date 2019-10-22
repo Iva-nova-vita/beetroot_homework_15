@@ -10,7 +10,7 @@ $main-color: black;
   color: $main-color;
   font-weight: bold;
 }
-@mixin a-color($background-color: #ff6033) {
+@mixin a-color {
   display: inline-block;
   text-decoration: none;
   font-family: $font;
@@ -18,7 +18,7 @@ $main-color: black;
   font-weight: lighter;
   font-size: 20px;
   text-transform: uppercase;
-  background-color: $background-color; //#ff6033;
+  background-color: $background-color;
   padding: 20px;
   margin-top: 35px;
   &:hover {
@@ -49,14 +49,14 @@ body {
     margin: 0 10%;
     height: 150px;
     align-items: center;
-    span {
+    .logo {
       font-family: "Pacifico", cursive;
       font-size: 50px;
       color: $main-color;
     }
     a {
       margin: 10px 25px;
-      @include main-color;
+      @include main-color($background-color: #ff6033);
       font-size: 16px;
       &:active {
         text-decoration: overline;
@@ -115,12 +115,10 @@ body {
   height: 27px;
   display: inline-block;
   visibility: hidden;
-  /*display: none;*/
 
   @media screen and (max-width: 1140px) {
     & {
       visibility: visible;
-      /*display: inline-block;*/
     }
   }
 
@@ -143,7 +141,6 @@ body {
   justify-content: space-between;
   background-color: #00baba;
   padding: 0 10%;
-  /*height: 700px;*/
   flex-wrap: wrap;
 
   align-items: center;
@@ -235,6 +232,7 @@ body {
     font-weight: bold;
     font-size: 20px;
     width: 70%;
+    text-align: center;
   }
   &.icons {
     display: flex;
@@ -297,9 +295,6 @@ body {
   a {
     @include a-color($background-color: #5585a2);
     width: 200px;
-    &:hover {
-      box-shadow: 0 4px 7px grey;
-    }
   }
 }
 #row1 {
@@ -533,7 +528,7 @@ body {
     form {
       display: flex;
       flex-direction: column;
-      width: 60%;
+      width: 50%;
       text-align: left;
       justify-content: space-between;
       @media screen and (max-width: 540px) {
@@ -547,8 +542,12 @@ body {
         background-color: #00c4c4;
         border: none;
         padding: 15px;
+        border-left: 2px solid #00c4c4;
         &::placeholder {
           color: $a-color;
+        }
+        &:hover {
+          border-left: 2px solid #355b82;
         }
       }
     }
@@ -565,6 +564,39 @@ body {
     .value {
       font: lighter 12px/25px "Raleway", sans-serif;
       color: $main-color;
+    }
+  }
+}
+footer {
+  padding: 5% 10%;
+
+  display: flex;
+  justify-content: space-between;
+  background-color: $main-color;
+  color: #b9b9b9;
+  align-content: center;
+  .date {
+    font: lighter 17px/27px "Raleway", sans-serif;
+    width: 30%;
+  }
+  a {
+    text-decoration: none;
+    color: $a-color;
+
+    .logo {
+      font-family: "Pacifico", cursive;
+      font-size: 25px;
+      padding-bottom: 5px;
+      width: 30%;
+      text-align: center;
+    }
+  }
+  .autor {
+    font: lighter 15px/27px "Raleway", sans-serif;
+    width: 30%;
+    .love_red {
+      color: #f12b55;
+      font-weight: bold;
     }
   }
 }
