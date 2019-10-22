@@ -212,7 +212,8 @@ body {
 
 #gallery {
   text-align: center;
-  background-color: #ffe92f; }
+  background-color: #ffe92f;
+  padding-bottom: 10%; }
   #gallery h1 {
     font: 600 90px/50px "Raleway", sans-serif;
     letter-spacing: 0;
@@ -236,6 +237,8 @@ body {
     width: 200px; }
     #gallery a:hover {
       box-shadow: 0 2px 5px grey; }
+    #gallery a:hover {
+      box-shadow: 0 4px 7px grey; }
 
 #row1 {
   padding: 5% 10% 0 10%;
@@ -283,3 +286,125 @@ body {
     max-width: 100%;
     height: auto;
     padding: 10px 0; }
+
+#subscribe_to_us {
+  background-image: url(../images/bg5block.jpg);
+  background-position: 50% 50%;
+  padding: 10%; }
+  #subscribe_to_us h3 {
+    font: bold 40px/40px "Raleway", sans-serif; }
+  #subscribe_to_us p {
+    width: 50%; }
+    @media screen and (max-width: 650px) {
+      #subscribe_to_us p {
+        width: 80%; } }
+  #subscribe_to_us input[type="email"] {
+    width: 50%;
+    height: 56px;
+    margin-right: 30px;
+    outline: none; }
+    @media screen and (max-width: 650px) {
+      #subscribe_to_us input[type="email"] {
+        width: 80%; } }
+  #subscribe_to_us input[type="submit"] {
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    color: white;
+    font-weight: lighter;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #96b92c;
+    padding: 20px;
+    margin-top: 35px;
+    width: 200px;
+    height: 60px;
+    border: none; }
+    #subscribe_to_us input[type="submit"]:hover {
+      box-shadow: 0 2px 5px grey; }
+
+#blog {
+  text-align: center;
+  background-color: #b07cf7;
+  padding: 5% 10%; }
+  #blog h2 {
+    font: 600 90px/50px "Raleway", sans-serif;
+    letter-spacing: 0;
+    color: white;
+    padding-top: 100px;
+    margin: 0 auto 50px auto; }
+  #blog > p {
+    width: 50%;
+    margin: auto;
+    color: white;
+    padding-bottom: 5%; }
+    @media screen and (max-width: 960px) {
+      #blog > p {
+        width: 80%; } }
+  #blog section {
+    display: flex;
+    justify-content: space-between; }
+    @media screen and (max-width: 960px) {
+      #blog section {
+        flex-direction: column; } }
+    #blog section div {
+      position: relative;
+      width: 30%; }
+      @media screen and (max-width: 960px) {
+        #blog section div {
+          width: fit-content;
+          align-self: center; } }
+      #blog section div img {
+        max-width: 100%; }
+    #blog section p {
+      position: relative;
+      top: -110px;
+      left: 20px;
+      font: lighter 12px/8px "Raleway", sans-serif;
+      color: white;
+      text-align: left; }
+    #blog section a {
+      text-decoration: none; }
+  #blog > a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    color: white;
+    font-weight: lighter;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #f72b3b;
+    padding: 20px;
+    margin-top: 35px;
+    width: 200px; }
+    #blog > a:hover {
+      box-shadow: 0 2px 5px grey; }
+  #blog .number_nov {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10%;
+    background-color: #474e59;
+    opacity: 0.5; }
+  #blog .number {
+    position: absolute;
+    top: 25px;
+    left: 32px;
+    font: bold 32px/15px "Raleway", sans-serif;
+    color: white; }
+  #blog .nov {
+    position: absolute;
+    top: 50px;
+    left: 27px;
+    font: bold 21px/25px "Raleway", sans-serif;
+    color: white; }
+  #blog h3 {
+    position: relative;
+    top: -105px;
+    left: 20px;
+    font: bold 18px/25px "Raleway", sans-serif;
+    color: white;
+    text-align: left;
+    max-width: 90%; }
