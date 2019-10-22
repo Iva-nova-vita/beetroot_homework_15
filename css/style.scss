@@ -402,7 +402,7 @@ body {
     padding-top: 100px;
     margin: 0 auto 50px auto;
   }
-  &>p {
+  & > p {
     width: 50%;
     margin: auto;
     color: $a-color;
@@ -417,7 +417,7 @@ body {
     @media screen and (max-width: 960px) {
       flex-direction: column;
     }
-    
+
     div {
       position: relative;
       width: 30%;
@@ -428,35 +428,31 @@ body {
 
       img {
         max-width: 100%;
-        
       }
     }
     p {
       position: relative;
-    top: -110px;
-    left: 20px;
-    font: lighter 12px/8px "Raleway", sans-serif;
-    color: $a-color;
-    text-align: left;
-
+      top: -110px;
+      left: 20px;
+      font: lighter 12px/8px "Raleway", sans-serif;
+      color: $a-color;
+      text-align: left;
     }
     a {
       text-decoration: none;
     }
-    
-
   }
 
-  &>a {
+  & > a {
     @include a-color($background-color: #f72b3b);
     width: 200px;
-    
+    margin-top: 0;
   }
   .number_nov {
     position: absolute;
     top: 20px;
     left: 20px;
-    
+
     width: 60px;
     height: 60px;
     border-radius: 10%;
@@ -469,7 +465,6 @@ body {
     left: 32px;
     font: bold 32px/15px "Raleway", sans-serif;
     color: $a-color;
-   
   }
   .nov {
     position: absolute;
@@ -486,5 +481,90 @@ body {
     color: $a-color;
     text-align: left;
     max-width: 90%;
+  }
+}
+#contact {
+  text-align: center;
+  background-image: url(../images/img_contact.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  padding: 5% 10%;
+  height: 100%;
+  h2 {
+    font: 600 90px/50px "Raleway", sans-serif;
+    letter-spacing: 0;
+    color: $main-color;
+    margin: 0 auto 50px auto;
+    @media screen and (min-width: 651px) and (max-width: 1110px) {
+      & {
+        font-size: 77px;
+      }
+    }
+    @media screen and (min-width: 351px) and (max-width: 650px) {
+      & {
+        font-size: 70px;
+      }
+    }
+    @media screen and (max-width: 350px) {
+      & {
+        font-size: 60px;
+      }
+    }
+  }
+  & > p {
+    width: 40%;
+    margin: auto;
+    color: $main-color;
+    padding-bottom: 5%;
+    @media screen and (max-width: 960px) {
+      width: 80%;
+    }
+  }
+  section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 380px;
+    @media screen and (max-width: 540px) {
+      flex-wrap: wrap;
+      height: 550px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      text-align: left;
+      justify-content: space-between;
+      @media screen and (max-width: 540px) {
+        width: 100%;
+      }
+      textarea {
+        flex-grow: 0.7;
+      }
+
+      & > * {
+        background-color: #00c4c4;
+        border: none;
+        padding: 15px;
+        &::placeholder {
+          color: $a-color;
+        }
+      }
+    }
+    .address {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      text-align: left;
+    }
+    .name {
+      font: bold 16px/25px "Raleway", sans-serif;
+      color: $main-color;
+    }
+    .value {
+      font: lighter 12px/25px "Raleway", sans-serif;
+      color: $main-color;
+    }
   }
 }
